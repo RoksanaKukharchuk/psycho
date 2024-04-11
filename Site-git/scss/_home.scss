@@ -549,6 +549,21 @@
 
             }
 
+            &__line {
+                  position: relative;
+                  margin-top: toRem(50);
+                  margin-bottom: toRem(50);
+                  &::before {
+                        content: "";
+                        position: absolute;
+                        background-image: url(../img/lines.svg);
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: toRem(52);
+                  }
+                  
+            }
+
 		&__btn {
 		}
 
@@ -611,15 +626,30 @@
 		}
             &__descr {
                   display: flex;
+                  gap: toRem(30);
             }
 }
 
 .author-kurs-descr {
+                  line-height: 150%;
+                  color: #44464a;
+                  margin-top: toRem(150);
+
 
 		&__title {
+                  font-weight: 700;
+                  @include adaptiveValue("font-size", 30, 24);
+                  line-height: 150%;
+                  color: #44464a;
+                  p {
+                        text-wrap: nowrap;
+                  }
 		}
 
 		&__descr {
+                  font-weight: 400;
+                  @include adaptiveValue("font-size", 18, 16);
+
 		}
 }
 
